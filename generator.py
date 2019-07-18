@@ -168,7 +168,7 @@ def crop_image(image, cropnum):
             im_list.append(image.crop((crop_x[i], crop_y[j], min(crop_x[i + 1], width), min(crop_y[j + 1], high))))
     return im_list
 
-def get_random_data(annotation_line, num_class, is_train, root='/mnt/sde/clf8113/datasets/CUB_200_2011'):
+def get_random_data(annotation_line, num_class, is_train, root='datasets/CUB_200_2011'):
     '''random preprocessing for real-time data augmentation'''
     line = annotation_line.split()
     output_size = (448, 448, 3)

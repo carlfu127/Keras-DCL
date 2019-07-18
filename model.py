@@ -33,21 +33,3 @@ def create_model(num_classes):
     out2 = Dense(2, use_bias=False, name='adv')(x)
 
     return keras.models.Model(input_image, [out1, out2, mask], name='dcl')
-
-if __name__ == '__main__':
-    import os
-    from keras_lr_multiplier import LRMultiplier
-    from keras.optimizers import SGD
-    lr = 8e-4
-    optimizer = SGD(lr=lr, momentum=0.9)
-    os.environ['CUDA_VISIBLE_DEVICES'] = '3'
-    model = create_model(200)
-    model.compile(optimizer= LRMultiplier(optimizer, multipliers={'mask':10., 'cls':10., 'adv':10.}),
-                  loss={'cls': celoss,
-                        'adv': celoss,
-                        'loc': l1loss},
-                  metrics={'cls': unswap_acc},
-                  loss_weights={'cls': 1.,
-                                'adv': 1.,
-                                'loc': 1.}
-                  )

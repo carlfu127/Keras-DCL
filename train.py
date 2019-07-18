@@ -45,7 +45,7 @@ if __name__ == '__main__':
     num_cls = 200
     batch_size = 8
     initial_learning_rate = 8e-4
-    dataset_dir = '/mnt/sde/clf8113/datasets/CUB_200_2011'
+    dataset_dir = 'datasets/CUB_200_2011'
 
     num_gpu = len(gpus.split(','))
     os.environ['CUDA_VISIBLE_DEVICES'] = gpus

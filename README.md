@@ -1,5 +1,5 @@
 # Keras-DCL
-This is an implementation of NTS-Net(https://arxiv.org/pdf/1809.00287.pdf) on Python 3, Keras, and TensorFlow.
+This is an implementation of CVPR 2019 paper DCL(http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Destruction_and_Construction_Learning_for_Fine-Grained_Image_Recognition_CVPR_2019_paper.pdf) on Python 3, Keras, and TensorFlow.
 
 ## Requirements
 - python 3+

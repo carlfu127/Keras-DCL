@@ -40,10 +40,10 @@ def step_decay(epoch, lr):
     return lr
 
 if __name__ == '__main__':
-    gpus = '4,5'
+    gpus = '0,1,2,3'
     save_weights_path = 'net_model/cub200'
     num_cls = 200
-    batch_size = 8
+    batch_size = 4
     initial_learning_rate = 8e-4
     dataset_dir = 'datasets/CUB_200_2011'
 
